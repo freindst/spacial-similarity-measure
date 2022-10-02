@@ -67,8 +67,9 @@ def is_intersect_or_contain(p_src: Polygon, p_tar: Polygon):
     for point in p_tar.exterior.coords:
         if p_src.contains(Point(point)):
             return True
-    if p_tar.intersects(p_src):
-        return True
+    for edge in get_exterior_edge_from_polygon(p_tar):
+        if edge.intersects(p_src):
+            return True;
     return False
 
 

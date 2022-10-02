@@ -112,3 +112,6 @@ print(su.get_hausdorff_distance(shape, shape2))
 
 p = Point(1, 1)
 print(p.coords[0])
+
+for row in grid:
+    print(row)
