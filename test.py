@@ -106,12 +106,5 @@ for i in range(len(geoshape)):
 #hash_s = su.get_multi_resolution_hash(disks, shape, 2)
 #print(hash_s)
 
-shape2 = geoshape.iloc[1]['geometry']
-print(shape.hausdorff_distance(shape2))
-print(su.get_hausdorff_distance(shape, shape2))
-
-p = Point(1, 1)
-print(p.coords[0])
-
-for row in grid:
-    print(row)
+import similaritymeasure
+1-jaccard_distance(set(ngrams('1001010110', 3)), set(ngrams('1001010110', 3)))
